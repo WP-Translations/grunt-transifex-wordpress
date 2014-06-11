@@ -46,12 +46,25 @@ grunt.initConfig({
       },
     },
 
-    po2mo: {
-      files: {
-        src: 'languages/*.po',
-        expand: true,
-      },
+         dirs: {
+    lang: 'languages',  // It should be languages or lang
     },
+
+    potomo: {
+      dist: {
+        options: {
+         poDel: false // Set to true if you want to erase the .po
+        },
+        files: [{
+         expand: true,
+         cwd: '<%= dirs.lang %>',
+          src: ['*.po'],
+          dest: '<%= dirs.lang %>',
+         ext: '.mo',
+          nonull: true
+      }]
+    }
+  },
 
     // Clean up build directory
     clean: {
@@ -96,16 +109,14 @@ grunt.initConfig({
 
 });
 
-// Default task.
-grunt.registerTask( 'default', 'exec:npmUpdate' );
-
-// Makepot task - grunt makepot
+// Default task. - grunt makepot
+grunt.registerTask( 'default', 'makepot' );
 
 // Makepot and push it on Transifex task(s).
 grunt.registerTask( 'makandpush', [ 'makepot', 'exec:txpush_s' ] );
 
 // Pull from Transifex and create .mo task(s).
-grunt.registerTask( 'tx', [ 'exec:txpull', 'po2mo' ] );
+grunt.registerTask( 'tx', [ 'exec:txpull', 'potomo' ] );
 
 // Build task(s).
   grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
