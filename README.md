@@ -89,7 +89,7 @@ That's it you're ready to `Grunt it` now with those commands!
 
 [grunt-wp-i18n](https://github.com/blazersix/grunt-wp-i18n) by Bradley Vercher to generate the .pot files.
 
-[grunt-po2mo](https://github.com/MicheleBertoli/grunt-po2mo) by Michele Bertoli to generate automatically the .mo files
+[grunt-potomo](https://github.com/axisnodejs/grunt-potomo) by Axisnodejs to generate automatically the .mo files
 
 [transifex client](https://github.com/transifex/transifex-client) the client command tool and much more...
 
