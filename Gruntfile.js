@@ -17,7 +17,7 @@ grunt.initConfig({
           type: 'wp-plugin',    // Type of project (wp-plugin or wp-theme).
           updateTimestamp: true,    // Whether the POT-Creation-Date should be updated without other changes.
           processPot: function( pot, options ) {
-            pot.headers['report-msgid-bugs-to'] = 'https://wp-translations.org/';
+            pot.headers['report-msgid-bugs-to'] = 'http://wp-translations.org/';
             pot.headers['plural-forms'] = 'nplurals=2; plural=n != 1;';
             pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)\n';
             pot.headers['language-team'] = 'WP-Translations (http://www.transifex.com/projects/p/wp-translations/)\n';
