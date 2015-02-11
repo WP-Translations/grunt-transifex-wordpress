@@ -15,7 +15,7 @@ grunt.initConfig({
           mainFile: 'foo.php',    // Main project file.
           potFilename: 'foo.pot',    // Name of the POT file.
           potHeaders: {
-                    poedit: true,                 // Includes common Poedit headers.
+              poedit: true,                 // Includes common Poedit headers.
                     'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
                 },
           type: 'wp-plugin',    // Type of project (wp-plugin or wp-theme).
@@ -23,8 +23,23 @@ grunt.initConfig({
           processPot: function( pot, options ) {
             pot.headers['report-msgid-bugs-to'] = 'http://wp-translations.org/';
             pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)\n';
-            pot.headers['language-team'] = 'WP-Translations (http://www.transifex.com/projects/p/wp-translations/)\n';
+            pot.headers['language-team'] = 'WP-Translations  <fxb@wp-translations.org>\n';
             pot.headers['language'] = 'en_US';
+            var translation, // Exclude meta data from pot.
+              excluded_meta = [
+                            'Plugin Name of the plugin/theme',
+                            'Plugin URI of the plugin/theme',
+                            'Author of the plugin/theme',
+                            'Author URI of the plugin/theme'
+                        ];
+                        for ( translation in pot.translations[''] ) {
+                          if ( 'undefined' !== typeof pot.translations[''][ translation ].comments.extracted ) {
+                            if ( excluded_meta.indexOf( pot.translations[''][ translation ].comments.extracted ) >= 0 ) {
+                              console.log( 'Excluded meta: ' + pot.translations[''][ translation ].comments.extracted );
+                                delete pot.translations[''][ translation ];
+                            }
+                        }
+                    }
             return pot;
           }
         }
