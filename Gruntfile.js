@@ -20,6 +20,7 @@ grunt.initConfig({
                 },
           type: 'wp-plugin',    // Type of project (wp-plugin or wp-theme).
           updateTimestamp: true,    // Whether the POT-Creation-Date should be updated without other changes.
+          updatePoFiles: false,              // Whether to update PO files in the same directory as the POT file.
           processPot: function( pot, options ) {
             pot.headers['report-msgid-bugs-to'] = 'http://wp-translations.org/';
             pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)\n';
