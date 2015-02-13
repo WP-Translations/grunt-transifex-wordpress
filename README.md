@@ -42,17 +42,17 @@ In .tx->config replace the project_slug and the pot_slug by your own Transifex p
 In your Gruntfile.js, replace in the section named `makepot` the data below:
 
 ```js
-    makepot: {
-        target: {
-            options: {
-          mainFile: 'foo.php',    // Main project file.
-          potFilename: 'foo.pot',    // Name of the POT file.
-          type: 'wp-plugin',    // Type of project (wp-plugin or wp-theme).
-          updateTimestamp: true,    // Whether the POT-Creation-Date should be updated without other changes.
-          updatePoFiles: false,              // Whether to update PO files in the same directory as the POT file.
-        }
-      }
-    },
+makepot: {
+	target: {
+		options: {
+			mainFile: 'foo.php', // Main project file.
+			potFilename: 'foo.pot', // Name of the POT file.
+			type: 'wp-plugin', // Type of project (wp-plugin or wp-theme).
+			updateTimestamp: true, // Whether the POT-Creation-Date should be updated without other changes.
+			updatePoFiles: false // Whether to update PO files in the same directory as the POT file.
+		}
+	}
+}
 ```
 ### Creates pot and pushes it to Transifex
 
@@ -60,10 +60,10 @@ In your Gruntfile.js, replace in the section named `exec`  the -- minimum percen
 
 ```js
 exec: {
-      txpull: { // Pull Transifex translation - grunt exec:txpull
-        cmd: 'tx pull -a --minimum-perc=100' // Change the percentage with --minimum-perc=yourvalue
-      },
-    },
+	txpull: { // Pull Transifex translation - grunt exec:txpull
+		cmd: 'tx pull -a --minimum-perc=100' // Change the percentage with --minimum-perc=yourvalue
+	}
+}
 ```
 
 That's it you're ready to `Grunt it` now with those commands!
