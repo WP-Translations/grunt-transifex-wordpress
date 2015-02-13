@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 		makepot: {
 			target: {
 				options: {
-					domainPath: '/languages/', // Where to save the POT file.
+					domainPath: '/languages', // Where to save the POT file.
 					exclude: ['build/.*'],
 					mainFile: 'foo.php', // Main project file.
 					potFilename: 'foo.pot', // Name of the POT file.
