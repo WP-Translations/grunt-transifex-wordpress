@@ -56,11 +56,11 @@ module.exports = function(grunt) {
 			},
 			txpush_s: { // Push pot to Transifex - grunt exec:txpush_s
 				cmd: 'tx push -s'
-			},
+			}
 		},
 
 		dirs: {
-			lang: 'languages', // It should be languages or lang
+			lang: 'languages' // It should be languages or lang
 		},
 
 		potomo: {
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 				src: ['**/*'],
 				dest: '<%= pkg.name %>/'
 			}
-		},
+		}
 	});
 
 	// Default task. - grunt makepot
