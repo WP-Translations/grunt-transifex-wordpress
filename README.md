@@ -16,7 +16,7 @@ A set of grunt tasks to integrate i18n tools and Transifex to your WordPress plu
 * Node.js - [Install Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 * Grunt-cli and Grunt (`npm install grunt-cli -g`)
 * Transifex Client - [Install tx client](http://docs.transifex.com/developer/client/setup)
-* Gettext - [Install Gettext](https://www.gnu.org/software/gettext/) or `brew install gettext` -> [Homebrew formula for OS X](http://brewformulas.org/Gettext) 
+* Gettext - [Install Gettext](https://www.gnu.org/software/gettext/) or `brew install gettext` -> [Homebrew formula for OS X](http://brewformulas.org/Gettext)
 
 ## Getting started
 
@@ -76,13 +76,17 @@ That's it you're ready to `Grunt it` now with those commands!
 
 `grunt makepot`
 
+### Check textdomain and makepot
+
+`grunt go-pot`
+
 ### Creates pot and pushes it to Transifex
 
-`grunt makandpush`
+`grunt tx-push`
 
 ### Pulls translations from Transifex and creates the .mo files
 
-`grunt tx`
+`grunt tx-pull`
 
 ### Extras: Builds a zip folder of all your files - Ready to use
 
