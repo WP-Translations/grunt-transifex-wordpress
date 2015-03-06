@@ -1,15 +1,15 @@
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg?style=flat-square)]() [![Tool](https://img.shields.io/badge/wp--translations-used-brightgreen.svg?style=flat-square)] (http://wp-translations.org)
+[![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg?style=flat-square)](http://www.gnu.org/licenses/gpl-2.0.html) [![Tool](https://img.shields.io/badge/wp--translations-used-brightgreen.svg?style=flat-square)] (http://wp-translations.org)
 # Grunt Transifex WordPress #
 
 A set of grunt tasks to integrate i18n tools and Transifex to your WordPress plugin/theme Grunt workflow.
 
-* Creates pot.
+* Creates pot
 
-* Creates pot and pushes it to Transifex.
+* Creates pot and pushes it to Transifex
 
-* Pulls translations from Transifex and creates the .mo files.
+* Pulls translations from Transifex and creates the .mo files
 
-* Extras: Builds a zip folder of all your files - Ready to use.
+* Extras: Builds a zip folder of all your files - ready to use
 
 ## Requirements
 
@@ -20,7 +20,7 @@ A set of grunt tasks to integrate i18n tools and Transifex to your WordPress plu
 
 ## Getting started
 
-If you haven't used [Grunt](http://gruntjs.com/) before check out Chris Coyier's post on [getting started with Grunt](http://24ways.org/2013/grunt-is-not-weird-and-hard/).
+If you haven't used [Grunt](http://gruntjs.com/) before, check out Chris Coyier's post on [getting started with Grunt](http://24ways.org/2013/grunt-is-not-weird-and-hard/).
 
 And for more WP-Grunt tools check out Devin Price's post [Using Grunt with WordPress Themes](http://wptheming.com/2014/05/grunt-wordpress-themes/).
 
@@ -88,16 +88,16 @@ That's it you're ready to `Grunt it` now with those commands!
 
 `grunt tx-pull`
 
-### Extras: Builds a zip folder of all your files - Ready to use
+### Extras: Builds a zip folder of all your files - ready to use
 
 `grunt build`
 
-### More infos - Thanks to ###
+### Thanks to:
 
 [grunt-wp-i18n](https://github.com/blazersix/grunt-wp-i18n) by Bradley Vercher to generate the .pot files.
 
-[grunt-potomo](https://github.com/axisnodejs/grunt-potomo) by Axisnodejs to generate automatically the .mo files
+[grunt-potomo](https://github.com/axisnodejs/grunt-potomo) by Axisnodejs to generate automatically the .mo files.
 
-[transifex client](https://github.com/transifex/transifex-client) the client command tool and much more...
+[transifex client](https://github.com/transifex/transifex-client) the client command tool and much more ...
 
-All the [Grunt Crew](https://github.com/gruntjs/) & [@grappler](https://github.com/grappler) the i18n Petit-Suisse expert ;)
+All the [Grunt Crew](https://github.com/gruntjs/) & [@grappler](https://github.com/grappler), the i18n Petit-Suisse expert ;)
