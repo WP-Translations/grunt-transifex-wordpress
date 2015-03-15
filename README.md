@@ -42,11 +42,13 @@ grunt
 Make sure you have a ~/.transifexrc.
 It is unique per user and stores the hostname, username and password for every Transifex server that you are using. It is stored in the user's home directory.
 
-`[https://www.transifex.com]
+```
+[https://www.transifex.com]
 username = user
 token =
 password = p@ssw0rd
-hostname = https://www.transifex.com`
+hostname = https://www.transifex.com
+```
 
 More info about [setting up your Transifex client](http://docs.transifex.com/developer/client/config#transifexrc)
 
