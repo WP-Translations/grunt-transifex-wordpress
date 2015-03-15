@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 		checktextdomain: {
 			options:{
 				text_domain: 'foo',
+				create_report_file: true,
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -75,7 +76,7 @@ module.exports = function(grunt) {
 					src: [
 						'**/*.php', // Include all files
 						'!node_modules/**', // Exclude node_modules/
-						'build/.*'// Exclude build/
+						'!build/.*'// Exclude build/
 						],
 					expand: true
 				}
