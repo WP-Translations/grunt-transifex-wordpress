@@ -23,8 +23,8 @@ module.exports = function(grunt) {
 					updatePoFiles: true, // Whether to update PO files in the same directory as the POT file.
 					processPot: function(pot, options) {
 						pot.headers['report-msgid-bugs-to'] = 'http://wp-translations.org/';
-						pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)\n';
-						pot.headers['language-team'] = 'WP-Translations <fxb@wp-translations.org>\n';
+						pot.headers['last-translator'] = 'WP-Translations (http://wp-translations.org/)';
+						pot.headers['language-team'] = 'WP-Translations <fxb@wp-translations.org>';
 						pot.headers['language'] = 'en_US';
 						var translation, // Exclude meta data from pot.
 							excluded_meta = [
