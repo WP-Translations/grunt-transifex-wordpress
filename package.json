@@ -1,16 +1,64 @@
 {
-  "name": "grunt-transifex-wordpress",
-  "version": "1.0.0",
-  "private": true,
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-checktextdomain": "^0.1.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-compress": "~0.8.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-exec": "~0.4.5",
-    "grunt-potomo": "~3.2.0",
-    "grunt-wp-i18n": "~0.5.0",
-    "load-grunt-tasks": "~0.2.0"
-  }
+	"name": "grunt-transifex-wordpress",
+	"capitalname": "PENGU!N Gold",
+	"description": "WP Theme PENGU!N Gold",
+	"author": "Stefan Brechbühl",
+	"homepage": "https://wpzoo.ch/",
+	"version": "1.0.0",
+	"copyright": "2015",
+	"license": "GPL-2.0+",
+	"private": true,
+	"contributors": [
+		{
+			"name": "your-name",
+			"url": "yoursite.com"
+		},
+		{
+			"name": "FX Bénard",
+			"url": "wp-translations.org"
+		}
+	],
+	"directories": {
+		"build": "./build"
+	},
+	"theme": {
+		"name": "PENGU!N Gold",
+		"uri": "http://wpzoo.ch/themes/penguin/",
+		"description": "PENGU!N is a clean and modern WordPress theme made by WPZOO. Besides the link color the used colors are monochromatic. The post thumbnail will be used as a big header image on single post pages as well as Pages. These theme characteristics make it possible to use PENGU!N for bloggin' as well as a magazin theme.",
+		"author": "WPZOO",
+		"authoruri": "http://wpzoo.ch",
+		"license": "GPL-2.0+",
+		"licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+		"textdomain": "penguin",
+		"domainpath": "/languages",
+		"tags": "black, blue, gray, white, light, one-column, two-columns, right-sidebar, left-sidebar, responsive-layout, accessibility-ready, custom-menu, featured-image-header,featured-images, post-formats, sticky-post, threaded-comments, translation-ready"
+	},
+	"bugs": {
+		"url": "https://github.com/WPZOO/penguin-gold/issues",
+		"email": "support@wpzoo.ch"
+	},
+	"pot": {
+		"reportmsgidbugsto": "WPZOO Translations <translations@wpzoo.ch>",
+		"lasttranslator": "WPZOO Translations <translations@wpzoo.ch>",
+		"languageteam": "WPZOO Translations <translations@wpzoo.ch>",
+		"type": "wp-plugin" //wp-plugin or wp-theme
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com//.git"
+	},
+
+	"devDependencies": {
+		"grunt": "~0.4.5",
+		"grunt-checktextdomain": "^0.1.1",
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-compress": "~0.8.0",
+		"grunt-contrib-copy": "~0.5.0",
+		"grunt-exec": "~0.4.5",
+		"grunt-potomo": "~3.2.0",
+		"grunt-wp-i18n": "~0.5.0",
+		"load-grunt-config": "*",
+		"load-grunt-tasks": "~0.2.0"
+
+	}
 }
