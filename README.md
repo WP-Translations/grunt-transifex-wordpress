@@ -82,7 +82,7 @@ In your Gruntfile.js, replace in the section named `checktextdomain` the text_do
 ```js
 checktextdomain: {
 			options:{
-				text_domain: 'foo',
+				text_domain: 'foo',  //Name of Your textdomain
 ```
 
 ### Creates pot and pushes it to Transifex
