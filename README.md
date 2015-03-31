@@ -74,6 +74,17 @@ makepot: {
 	}
 }
 ```
+
+### Checktexdomain
+
+In your Gruntfile.js, replace in the section named `checktextdomain` the text_domain option:
+
+```js
+checktextdomain: {
+			options:{
+				text_domain: 'foo',
+```
+
 ### Creates pot and pushes it to Transifex
 
 In your Gruntfile.js, replace in the section named `exec`  the -- minimum percentage value if needed:
