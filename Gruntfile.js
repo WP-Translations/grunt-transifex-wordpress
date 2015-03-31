@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
 		checktextdomain: {
 			options:{
-				text_domain: 'foo',
+				text_domain: 'foo', //Name of Your textdomain
 				create_report_file: true,
 				keywords: [
 					'__:1,2d',
