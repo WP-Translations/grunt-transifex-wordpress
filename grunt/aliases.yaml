@@ -2,27 +2,22 @@
 ---
 # Build everything
 build:
-  - 'build:css'
-  - 'build:images'
-  - 'build:js'
-  - 'build:i18n'
-# Build CSS from Scss to production
-'build:css':
-  - 'newer:sass'
-  - 'newer:wpcss'
-  - 'newer:cssjanus'
-  - 'newer:cssmin'
-# Optimise images from source to production
-'build:images':
-  - 'newer:imagemin'
-# Build JavaScript from assets to production
-'build:js':
-  - 'newer:uglify'
-# Build internationalisation features
+ - 'clean'
+ - 'copy'
+ -'compress'
+# Checktextdomain and makepot task(s)
 'build:i18n':
   - 'checktextdomain'
   - 'makepot'
   - 'newer:potomo'
+# Makepot and push it on Transifex task(s).
+tx-push:
+  - 'makepot'
+  - 'exec:txpush_s'
+# Pull from Transifex and create .mo task(s).
+tx-pull:
+  - 'exec:txpull'
+  - 'potomo'
 # Default task
 default:
-  - 'watch'
+  - 'makepot'
