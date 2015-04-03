@@ -24,16 +24,16 @@
 	  	"sass": "",
 	  	"css": "",
 	  	"build": "./build",
-	  	"languages": "/languages" // Where to save the POT file.
+	  	"languages": "/languages"
 	  	},
 	"pot": {
-	  	"type": "wp-plugin", // Type of project (wp-plugin or wp-theme).
-	  	"textdomain": "foo", // Textdomain slug
-	  	"src": "foo.php", // Main project file.
+	  	"type": "wp-plugin",
+	  	"textdomain": "foo",
+	  	"src": "foo.php",
 	  	"header": {
 	  		"bugs": "http://wp-translations.org/",
 	  		"team": "WP-Translations <fxb@wp-translations.org>",
-	  		"last_translator": "WP-Translations <fxb@wp-translations.org>",
+	  		"last_translator": "WP-Translations <fxb@wp-translations.org>"
 	  	}
 	  },
 	  "devDependencies": {
