@@ -4,12 +4,12 @@
 build:
  - 'clean'
  - 'copy'
- -'compress'
+ - 'compress'
 # Checktextdomain and makepot task(s)
 'build:i18n':
   - 'checktextdomain'
   - 'makepot'
-  - 'newer:potomo'
+  - 'potomo'
 # Makepot and push it on Transifex task(s).
 tx-push:
   - 'makepot'
