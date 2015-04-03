@@ -1,0 +1,28 @@
+# Grunt aliases
+---
+# Build everything
+build:
+  - 'build:css'
+  - 'build:images'
+  - 'build:js'
+  - 'build:i18n'
+# Build CSS from Scss to production
+'build:css':
+  - 'newer:sass'
+  - 'newer:wpcss'
+  - 'newer:cssjanus'
+  - 'newer:cssmin'
+# Optimise images from source to production
+'build:images':
+  - 'newer:imagemin'
+# Build JavaScript from assets to production
+'build:js':
+  - 'newer:uglify'
+# Build internationalisation features
+'build:i18n':
+  - 'checktextdomain'
+  - 'makepot'
+  - 'newer:potomo'
+# Default task
+default:
+  - 'watch'
