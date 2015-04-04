@@ -7,6 +7,7 @@ module.exports = {
 				src: [
 					'**/*.{png,jpg}',
 					'!node_modules/**',
+					'!build/**',
 				]
 			}
 		]
