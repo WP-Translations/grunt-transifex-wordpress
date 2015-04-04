@@ -11,6 +11,8 @@ A set of grunt tasks to integrate i18n tools and Transifex to your WordPress plu
 
 * Extras: Builds a zip folder of all your files - ready to use
 
+* Bonus: A set of others grunt.js ready to use
+
 ## Requirements
 
 * Node.js - [Install Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
@@ -22,7 +24,9 @@ A set of grunt tasks to integrate i18n tools and Transifex to your WordPress plu
 
 If you haven't used [Grunt](http://gruntjs.com/) before, check out Chris Coyier's post on [getting started with Grunt](http://24ways.org/2013/grunt-is-not-weird-and-hard/).
 
-And for more WP-Grunt tools check out Devin Price's post [Using Grunt with WordPress Themes](http://wptheming.com/2014/05/grunt-wordpress-themes/).
+And for more WP-Grunt optimization [Supercharging your Gruntfile](http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/).
+
+All Grunt configuration are separated into different files already setup for you and almost all Grunt config setups are done in the package.json file
 
 Clone this repo, cd to the directory, run `npm install` to install the necessary packages.
 
@@ -56,31 +60,34 @@ More info about [setting up your Transifex client](http://docs.transifex.com/dev
 
 In .tx->config replace the project_slug and the pot_slug by your own Transifex project data.
 
-### Creates pot
+### packages.json
 
-In your Gruntfile.js, replace in the section named `makepot` the data below:
+All variables are setup in this file. Change all settings to reflect your own project infos. Nothing complicated
+
+#### pot
+
+In your package.json, replace in the section named `pot` the data below:
 
 ```js
-makepot: {
-	target: {
-		options: {
-			mainFile: 'foo.php', // Main project file.
-			potFilename: 'foo.pot', // Name of the POT file.
-			type: 'wp-plugin', // Type of project (wp-plugin or wp-theme).
-			updateTimestamp: true, // Whether the POT-Creation-Date should be updated without other changes.
-			updatePoFiles: false // Whether to update PO files in the same directory as the POT file.
-		}
-	}
-}
+ "pot": {
+    "type": "wp-plugin",
+    "textdomain": "foo",
+    "src": "foo.php",
+    "header": {
+      "bugs": "http://wp-translations.org/",
+      "team": "WP-Translations <fxb@wp-translations.org>",
+      "last_translator": "WP-Translations <fxb@wp-translations.org>"
+    }
+  },
 ```
 ### Creates pot and pushes it to Transifex
 
-In your Gruntfile.js, replace in the section named `exec`  the -- minimum percentage value if needed:
+In your grunt > exec.js, replace in the section named `exec`  the -- minimum percentage value if needed:
 
 ```js
 exec: {
 	txpull: { // Pull Transifex translation - grunt exec:txpull
-		cmd: 'tx pull -a --minimum-perc=100' // Change the percentage with --minimum-perc=yourvalue
+		cmd: 'tx pull -a -f --minimum-perc=100' // Change the percentage with --minimum-perc=yourvalue
 	}
 }
 ```
@@ -95,7 +102,7 @@ That's it you're ready to `Grunt it` now with those commands!
 
 ### Check textdomain and makepot
 
-`grunt go-pot`
+`grunt build:i18n`
 
 ### Creates pot and pushes it to Transifex
 
@@ -108,6 +115,11 @@ That's it you're ready to `Grunt it` now with those commands!
 ### Extras: Builds a zip folder of all your files - ready to use
 
 `grunt build`
+
+### Bonus: A set of other grunt.js ready to use
+
+Open the grunt >  bonus folder. Pick a ready made grunt.js and move it into the grunt folder.  Twist it if needed.
+`npm install it` and add a grunt task if needed in the `aliases.yaml` file
 
 ### Thanks to:
 
