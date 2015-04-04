@@ -25,6 +25,10 @@
  * Domain Path:       /languages
  */
 
+__('I alert checktextdomain task');
+
+
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
