@@ -5,7 +5,7 @@
 - 'checktextdomain'
 - 'makepot'
 - 'newer:potomo'
-# Makepot and push it on Transifex task(s).
+# Makepot and push it to Transifex task(s).
 tx-push:
 - 'makepot'
 - 'exec:txpush_s'
