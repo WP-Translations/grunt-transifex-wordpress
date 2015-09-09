@@ -123,7 +123,7 @@ That's it you're ready to `Grunt it` now with those commands!
 
 ### Thanks to:
 
-[grunt-wp-i18n](https://github.com/cedaro/grunt-wp-i18n) by Bradley Vercher to generate the .pot files.
+[grunt-wp-i18n](https://github.com/cedaro/grunt-wp-i18n) by Brady Vercher to generate the .pot files.
 
 [grunt-potomo](https://github.com/axisthemes/grunt-potomo) by AxisThemes to generate automatically the .mo files.
 
